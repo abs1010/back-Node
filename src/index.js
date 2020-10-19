@@ -39,7 +39,9 @@ function validateProjectId(request, response, next) {
 
 }
 
+//Applies Middleware to all request
 app.use(logRequests);
+//Applies to all request starting with the provided resource /projects:id
 app.use('/projects/:id', validateProjectId);
 
 ///GET request
